@@ -1,0 +1,42 @@
+- vendor: meta
+  domains:
+    - connect.facebook.net
+    - www.facebook.com
+    - graph.facebook.com
+  categories: [analytics, advertising]
+
+- vendor: google_analytics
+  domains:
+    - www.google-analytics.com
+    - analytics.google.com
+    - stats.g.doubleclick.net
+  categories: [analytics]
+
+- vendor: google_tag_manager
+  domains:
+    - www.googletagmanager.com
+  categories: [tag_manager, analytics]
+
+- vendor: datadog
+  domains:
+    - browser-intake-datadoghq.com
+    - rum.browser-intake-datadoghq.com
+  categories: [analytics, session_replay]
+
+- vendor: fullstory
+  domains:
+    - edge.fullstory.com
+    - rs.fullstory.com
+  categories: [session_replay, analytics]
+
+- vendor: hotjar
+  domains:
+    - script.hotjar.com
+    - vars.hotjar.com
+    - in.hotjar.com
+  categories: [session_replay, analytics]
+
+- vendor: mixpanel
+  domains:
+    - api.mixpanel.com
+  categories: [analytics, cdp]

@@ -1,0 +1,38 @@
+email:
+  regexes:
+    - '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'
+
+phone:
+  regexes:
+    - '(?<!\d)(?:\+?1[\s\-\.]*)?(?:\(?\d{3}\)?[\s\-\.]*)\d{3}[\s\-\.]?\d{4}(?!\d)'
+
+account_id:
+  regexes:
+    - '(?i)account[_-]?id[=: /]*[A-Za-z0-9_-]{4,}'
+
+user_id:
+  regexes:
+    - '(?i)user[_-]?id[=: /]*[A-Za-z0-9_-]{4,}'
+
+health_terms:
+  keywords:
+    - diagnosis
+    - treatment
+    - symptom
+    - symptoms
+    - medication
+    - medications
+    - condition
+    - patient
+    - provider
+    - doctor
+    - therapy
+    - oncology
+    - cardiology
+
+search_term_keys:
+  keys:
+    - q
+    - query
+    - search
+    - keyword

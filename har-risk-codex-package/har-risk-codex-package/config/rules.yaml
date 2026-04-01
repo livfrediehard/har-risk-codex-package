@@ -1,0 +1,28 @@
+- id: THIRD_PARTY_ANALYTICS_EMAIL
+  family: potential_sensitive_data_disclosure_signal
+  summary_template: "Third-party analytics endpoint received an email-like identifier."
+  when:
+    vendor_category_in: [analytics]
+    data_elements_any: [email]
+    third_party: true
+  score: 0.74
+  caveat: "Confirm whether the recipient acts solely as a service provider and whether transmission was authorized."
+
+- id: SESSION_REPLAY_FORM_INPUT
+  family: potential_wiretap_signal
+  summary_template: "Session replay or similar tooling appears to receive form-related data."
+  when:
+    vendor_category_in: [session_replay]
+    data_elements_any: [email, phone, search_term]
+    third_party: true
+  score: 0.82
+  caveat: "Confirm actual replay capture scope and whether masking or suppression was active."
+
+- id: HEALTH_TERM_TO_THIRD_PARTY
+  family: potential_health_privacy_signal
+  summary_template: "A third-party endpoint received health-related terms or context."
+  when:
+    data_elements_any: [health_term]
+    third_party: true
+  score: 0.78
+  caveat: "Review surrounding page context to confirm whether the terms relate to a person’s health information."
